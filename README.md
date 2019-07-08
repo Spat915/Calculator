@@ -14,44 +14,31 @@ https://b2swne134l.execute-api.us-east-1.amazonaws.com/default/calculator
 
 The following table details the API:
 
-<table>
-    <tr>
-        <th>Method</th>
-        <th>Body</th>
-        <th>Return</th>
-    </tr>
-    <tr>
-        <td>GET</td>
-        <td>None</td>
-        <td>
-            <pre>
+~~~~
+Name: GetAllCalculatorOperations
+Method: GET
+Path: /
+Response Schema:
 [
     {
         "operation": string,
         "operand": number
     }
 ]
-            </pre>
-        </td>
-    </tr>
-    <tr>
-        <td>POST</td>
-        <td>
-            <pre>
+~~~~
+~~~~
+Name: PerformCalculate
+Method: POST
+Path: /
+Request Schema:
 {
     "operation": string,
     "operand1": number,
     "operand2"?: number
 }
-            </pre>
-        </td>
-        <td>
-            <pre>
+Return Schema:
 number
-            </pre>
-        </td>
-    </tr>
-</table>
+~~~~
 
 ## Dependencies
 
