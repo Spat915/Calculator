@@ -36,7 +36,7 @@ Request Schema:
     "operand1": number,
     "operand2"?: number
 }
-Return Schema:
+Response Schema:
 number
 ~~~~
 
