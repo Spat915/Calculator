@@ -7,5 +7,79 @@
 </ion-header>
 
 <ion-content>
-  Content Goes Here
+  <ion-grid>
+	<ion-row>
+	  <ion-col>
+		<ion-input id="lastOp" [value]="lastOperation" readonly></ion-input>
+	  </ion-col>
+	</ion-row>
+	<ion-row>
+ 	  <ion-col>
+		<ion-input id="currentOp" [value]="currentOperation" placeholder="0" readonly></ion-input>
+	  </ion-col>
+	</ion-row>
+  </ion-grid>
+  <ion-grid id="wrapper">
+	<ion-row>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">7</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">8</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">9</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button id="divide" color="light" expand="full" (click)="buttonPush($event)" disabled>/</ion-button>
+	  </ion-col>
+	</ion-row>
+	<ion-row>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">4</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">5</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">6</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button id="multiply" color="light" expand="full" (click)="buttonPush($event)" disabled>X</ion-button>
+	  </ion-col>
+	</ion-row>
+	<ion-row>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">1</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">2</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">3</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button id="add" color="light" expand="full" (click)="buttonPush($event)" disabled>+</ion-button>
+	  </ion-col>
+	</ion-row>
+	<ion-row>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">C</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">0</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button color="light" expand="full" (click)="buttonPush($event)">.</ion-button>
+	  </ion-col>
+	  <ion-col>
+	    <ion-button id="subtract" color="light" expand="full" (click)="buttonPush($event)" disabled>-</ion-button>
+	  </ion-col>
+	</ion-row>
+	<ion-row>
+	  <ion-col>
+		<ion-button expand="full" (click)="buttonPush($event)">=</ion-button>
+	  </ion-col>
+	</ion-row>
+  </ion-grid>
 </ion-content>
